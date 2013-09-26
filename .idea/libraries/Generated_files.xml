@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/js/Interfaces/Room.js" />
+        <item url="file://$PROJECT_DIR$/js/Engine.js" />
+        <item url="file://$PROJECT_DIR$/js/RoomStats.js" />
+        <item url="file://$PROJECT_DIR$/js/vendor/KineticJS.js.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/js/Interfaces/Room.js" />
+      <root url="file://$PROJECT_DIR$/js/Engine.js" />
+      <root url="file://$PROJECT_DIR$/js/RoomStats.js" />
+      <root url="file://$PROJECT_DIR$/js/vendor/KineticJS.js.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>
