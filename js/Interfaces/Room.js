@@ -58,12 +58,18 @@ var Elements;
             tile.group = new Kinetic.Group({ draggable: true });
             tile.roomStats = this;
 
+            // Generate the image
             tile.image = new Kinetic.Image({ x: 0, y: 0, image: img, width: ScaleToThumbWidth(this.width, this.height), height: ScaleToThumbHeight(this.width, this.height) });
 
+            // Generate the label
             tile.label = new Kinetic.Label({ y: tile.image.getHeight(), x: 0, opacity: 0.75 });
             tile.label.add(new Kinetic.Tag({ fill: 'white' }));
-            tile.label.add(new Kinetic.Text({ text: this.name, fill: 'black' }));
-            tile.label.setX((tile.image.getWidth() - tile.label.getText().getTextWidth()) / 2);
+            tile.label.add(new Kinetic.Text({ text: this.name, fill: 'black', width: 75, align: 'center' }));
+
+            // Centre the image to the text
+            tile.label.setX((tile.image.getWidth() - tile.label.getWidth()) / 2);
+
+            // group them up
             tile.group.add(tile.image).add(tile.label);
 
             return tile;
@@ -87,6 +93,19 @@ else
     var RoomTile = (function () {
         function RoomTile() {
         }
+        RoomTile.prototype.getWidth = function () {
+            var minX = 0;
+            var maxX = 0;
+            this.group.getChildren().forEach(function (child) {
+                if (child.getX() <= minX) {
+                    minX = child.getX();
+                }
+                if (child.getX() + child.getWidth() >= maxX) {
+                    maxX = child.getX() + child.getWidth();
+                }
+            });
+            return maxX - minX;
+        };
         return RoomTile;
     })();
     Elements.RoomTile = RoomTile;

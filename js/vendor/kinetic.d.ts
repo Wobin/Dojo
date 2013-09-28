@@ -53,6 +53,8 @@ declare module Kinetic {
         getTransform(): any;
         getX(): number;
         getY(): number;
+        getWidth() :number;
+        getHeight() : number;
         getZIndex(): number;
         hide(): void;
         isDraggable(): boolean;

@@ -16,10 +16,13 @@ var Engine;
         LibraryStage = new Kinetic.Stage({ container: "Library", width: 1700, height: 500 });
         LibraryLayer = new Kinetic.Layer();
 
-        usedWidth = 0;
+        usedWidth = 10;
 
         RoomStats.Rooms.forEach(function (room) {
-            LibraryLayer.add(room.GetLegend().group);
+            var legend = room.GetLegend();
+            legend.group.setX(usedWidth);
+            LibraryLayer.add(legend.group);
+            usedWidth += legend.getWidth() + 5;
         });
         LibraryStage.add(LibraryLayer);
     }

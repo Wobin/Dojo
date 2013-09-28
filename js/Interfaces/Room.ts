@@ -67,15 +67,19 @@ module Elements {
             img.src = this.imageURL;
 
             var tile = new RoomTile();
-            tile.group = new Kinetic.Group({ draggable : true});
+            tile.group = new Kinetic.Group({ draggable : true, });
             tile.roomStats = this;
-
+            // Generate the image
             tile.image = new Kinetic.Image({ x :0, y: 0,  image : img, width: ScaleToThumbWidth(this.width, this.height), height: ScaleToThumbHeight(this.width, this.height)});
 
+            // Generate the label
             tile.label = new Kinetic.Label({ y: tile.image.getHeight(), x : 0, opacity : 0.75  });
             tile.label.add(new Kinetic.Tag({fill : 'white'}));
-            tile.label.add(new Kinetic.Text({ text : this.name, fill : 'black'}));
-            tile.label.setX((tile.image.getWidth() - tile.label.getText().getTextWidth())/2); // Centre the text
+            tile.label.add(new Kinetic.Text({ text : this.name, fill : 'black', width : 75, align : 'center'}));
+            // Centre the image to the text
+            tile.label.setX((tile.image.getWidth() - tile.label.getWidth())/2);
+
+            // group them up
             tile.group.add(tile.image).add(tile.label);
 
             return tile;
@@ -100,6 +104,19 @@ module Elements {
         group : Kinetic.Group;
         roomStats: RoomTemplate;
         layer : Kinetic.Layer;
+        getWidth() : number {
+            var minX : number = 0;
+            var maxX : number = 0;
+            this.group.getChildren().forEach(function(child : Kinetic.Node){
+                if(child.getX() <= minX) {
+                    minX = child.getX();
+                }
+                if(child.getX() + child.getWidth() >= maxX) {
+                    maxX = child.getX() + child.getWidth();
+                }
+            });
+            return maxX - minX;
+        }
     }
 
     export class Room {
