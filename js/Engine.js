@@ -9,14 +9,19 @@
 var Engine;
 (function (Engine) {
     var LibraryStage;
+    var LibraryLayer;
     var usedWidth;
 
     function CreateLibrary() {
         LibraryStage = new Kinetic.Stage({ container: "Library", width: 1700, height: 500 });
+        LibraryLayer = new Kinetic.Layer();
+
         usedWidth = 0;
+
         RoomStats.Rooms.forEach(function (room) {
-            LibraryStage.add(room.GetLegend().layer);
+            LibraryLayer.add(room.GetLegend().image);
         });
+        LibraryStage.add(LibraryLayer);
     }
     Engine.CreateLibrary = CreateLibrary;
     ;

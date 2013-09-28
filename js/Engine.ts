@@ -9,19 +9,23 @@
 
 module Engine{
     var LibraryStage : Kinetic.Stage;
+    var LibraryLayer : Kinetic.Layer;
     var usedWidth : number;
 
     export function CreateLibrary() {
         LibraryStage = new Kinetic.Stage({container : "Library", width : 1700, height: 500});
-        usedWidth = 0;
-        RoomStats.Rooms.forEach(function(room){
-            LibraryStage.add(room.GetLegend().layer);
-        });
+        LibraryLayer = new Kinetic.Layer();
 
+        usedWidth = 0;
+
+        RoomStats.Rooms.forEach(function(room){
+            LibraryLayer.add(room.GetLegend().image);
+        });
+        LibraryStage.add(LibraryLayer);
     };
 
 document.addEventListener('DOMContentLoaded', function () {
-    Engine.CreateLibrary();
+   Engine.CreateLibrary();
 });
 
 }

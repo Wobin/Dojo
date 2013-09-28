@@ -24,7 +24,8 @@ module Elements {
         public xCentre : number;
         public yCentre : number;
         public doorCount : number;
-        constructor(public id:number, public image:string, public height:number, public width:number, doorList: Door[]) {
+
+        constructor(public id:number, public imageURL:string, public height:number, public width:number, doorList: Door[]) {
             this.doors = {};
             for(var i = 0; i < doorList.length; i++)
             {
@@ -34,9 +35,9 @@ module Elements {
             this.xCentre = height/2;
             this.yCentre = width/2;
         }
-        Copy(image : string, id: number) : RoomTemplate {
+        Copy(imageURL : string, id: number) : RoomTemplate {
             var room = jQuery.extend(true, {}, this);
-            room.image = image;
+            room.imageURL = imageURL;
             room.id = id;
             return room;
         }
@@ -56,22 +57,16 @@ module Elements {
             var img = new Image();
             var tile = new RoomTile();
             tile.roomStats = this;
-            tile.layer = new Kinetic.Layer();
-            img.src = this.image;
-            img.onload = function() {
-                tile.image = new Kinetic.Image({ image : img});
-                tile.layer.add(tile.image);
-            };
+            img.src = this.imageURL;
+            tile.image = new Kinetic.Image({ image : img, width : this.width, height : this.height});
             return tile;
         }
         GetLegend() : RoomTile {
             var img = new Image();
-            img.src = this.image;
+            img.src = this.imageURL;
             var tile = new RoomTile();
             tile.roomStats = this;
-            tile.image = new Kinetic.Image({ image : img, width: ScaleToThumbWidth(this.width, this.height), height: ScaleToThumbHeight(this.width, this.height), draggable : true });
-            tile.layer = new Kinetic.Layer();
-            tile.layer.add(tile.image);
+            tile.image = new Kinetic.Image({ x :50, y: 50,  image : img, width: ScaleToThumbWidth(this.width, this.height), height: ScaleToThumbHeight(this.width, this.height), draggable : true });
             return tile;
         }
 
@@ -79,17 +74,18 @@ module Elements {
     }
     function ScaleToThumbWidth(width :number, height: number) :number
     {
-        if(width >= height) return 100;
-        else return  width / height * 100;
+        if(width >= height) return 75;
+        else return  width / height * 75;
     }
     function ScaleToThumbHeight(width :number, height: number) :number
     {
-        if(height >= width) return 100;
-        else return  width / height * 100;
+        if(height >= width) return 75;
+        else return  height / width * 75;
     }
 
     export class RoomTile {
         image : Kinetic.Image;
+
         roomStats: RoomTemplate;
         layer : Kinetic.Layer;
     }
