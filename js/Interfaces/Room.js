@@ -9,8 +9,9 @@
 var Elements;
 (function (Elements) {
     var RoomTemplate = (function () {
-        function RoomTemplate(id, imageURL, height, width, doorList) {
+        function RoomTemplate(id, name, imageURL, height, width, doorList) {
             this.id = id;
+            this.name = name;
             this.imageURL = imageURL;
             this.height = height;
             this.width = width;
@@ -22,8 +23,9 @@ var Elements;
             this.xCentre = height / 2;
             this.yCentre = width / 2;
         }
-        RoomTemplate.prototype.Copy = function (imageURL, id) {
+        RoomTemplate.prototype.Copy = function (id, name, imageURL) {
             var room = jQuery.extend(true, {}, this);
+            room.name = name;
             room.imageURL = imageURL;
             room.id = id;
             return room;
@@ -51,9 +53,19 @@ var Elements;
         RoomTemplate.prototype.GetLegend = function () {
             var img = new Image();
             img.src = this.imageURL;
+
             var tile = new RoomTile();
+            tile.group = new Kinetic.Group({ draggable: true });
             tile.roomStats = this;
-            tile.image = new Kinetic.Image({ x: 50, y: 50, image: img, width: ScaleToThumbWidth(this.width, this.height), height: ScaleToThumbHeight(this.width, this.height), draggable: true });
+
+            tile.image = new Kinetic.Image({ x: 0, y: 0, image: img, width: ScaleToThumbWidth(this.width, this.height), height: ScaleToThumbHeight(this.width, this.height) });
+
+            tile.label = new Kinetic.Label({ y: tile.image.getHeight(), x: 0, opacity: 0.75 });
+            tile.label.add(new Kinetic.Tag({ fill: 'white' }));
+            tile.label.add(new Kinetic.Text({ text: this.name, fill: 'black' }));
+            tile.label.setX((tile.image.getWidth() - tile.label.getText().getTextWidth()) / 2);
+            tile.group.add(tile.image).add(tile.label);
+
             return tile;
         };
         return RoomTemplate;

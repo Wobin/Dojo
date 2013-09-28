@@ -199,6 +199,23 @@ declare module Kinetic {
         constructor (config: ObjectOptionsConfig);
     }
 
+    class Label extends Container {
+        constructor( config: LabelConfig);
+        getTag() : Tag;
+        getText() : Text;
+    }
+
+    class Tag {
+        constructor (config : TagConfig);
+        getCornerRadius() : number;
+        getPointerDirection() : string;
+        getPointerHeight() : number;
+        getPointerWidth() : number;
+        setCornerRadius(corner : number);
+        setPointerDirection(pointerDirection? : string);
+        setPointerHeight(pointerHeight : number);
+        setPointerWidth(pointerWidth: number);
+    }
     class Collection {
         apply(method, val);
         each(func: () =>{ });
@@ -345,6 +362,16 @@ declare module Kinetic {
     class Animation extends Container {
         start();
         stop();
+    }
+    interface LabelConfig extends ObjectOptionsConfig {
+        width?: number;
+        height?: number;
+    }
+    interface TagConfig {
+        pointerDirection? : string;
+        pointerWidth? : number;
+        pointerHeight? : number;
+        cornerRadius? : number;
     }
 
     interface StageConfig extends ObjectOptionsConfig {

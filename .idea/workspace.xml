@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cca46344-433e-4ce8-b848-f4d79ec25f85" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Engine.js.map" afterPath="$PROJECT_DIR$/js/Engine.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Engine.js" afterPath="$PROJECT_DIR$/js/Engine.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Engine.ts" afterPath="$PROJECT_DIR$/js/Engine.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/vendor/KineticJS.js" afterPath="$PROJECT_DIR$/js/vendor/KineticJS.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Interfaces/Room.js.map" afterPath="$PROJECT_DIR$/js/Interfaces/Room.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Interfaces/Room.js" afterPath="$PROJECT_DIR$/js/Interfaces/Room.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Interfaces/Room.ts" afterPath="$PROJECT_DIR$/js/Interfaces/Room.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/RoomStats.js.map" afterPath="$PROJECT_DIR$/js/RoomStats.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/RoomStats.js" afterPath="$PROJECT_DIR$/js/RoomStats.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/RoomStats.ts" afterPath="$PROJECT_DIR$/js/RoomStats.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/vendor/kinetic.d.ts" afterPath="$PROJECT_DIR$/js/vendor/kinetic.d.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Dojo.iws" />
@@ -74,16 +73,34 @@
       <file leaf-file-name="Room.ts" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/Interfaces/Room.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="27" selection-start="660" selection-end="660" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="1887">
+            <state line="37" column="61" selection-start="1125" selection-end="1125" vertical-scroll-proportion="0.0" vertical-offset="267" max-vertical-offset="2091">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Engine.ts" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="KineticJS.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/vendor/KineticJS.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="4246" selection-start="100480" selection-end="100480" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="kinetic.d.ts" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/vendor/kinetic.d.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="333" column="8" selection-start="10046" selection-end="10046" vertical-scroll-proportion="0.3321234" vertical-offset="5478" max-vertical-offset="8432">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Engine.ts" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/Engine.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="9" selection-start="698" selection-end="698" vertical-scroll-proportion="0.6753472" vertical-offset="53" max-vertical-offset="629">
+            <state line="26" column="9" selection-start="698" selection-end="698" vertical-scroll-proportion="0.0" vertical-offset="53" max-vertical-offset="629">
               <folding />
             </state>
           </provider>
@@ -92,7 +109,7 @@
       <file leaf-file-name="RoomStats.ts" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/RoomStats.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="85" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1734">
+            <state line="50" column="36" selection-start="3931" selection-end="3931" vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="1751">
               <folding />
             </state>
           </provider>
@@ -133,13 +150,13 @@
         <option value="dojo/js/Engine.ts" />
         <option value="$PROJECT_DIR$/js/vendor/KineticJS.js.ts" />
         <option value="$PROJECT_DIR$/js/vendor/reference.d.ts" />
-        <option value="$PROJECT_DIR$/js/vendor/kinetic.d.ts" />
         <option value="dojo/js/Interfaces/Room.ts" />
         <option value="$PROJECT_DIR$/js/vendor/KineticJS.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/vendor/kinetic.d.ts" />
         <option value="$PROJECT_DIR$/js/Engine.ts" />
-        <option value="$PROJECT_DIR$/js/RoomStats.ts" />
         <option value="$PROJECT_DIR$/js/Interfaces/Room.ts" />
+        <option value="$PROJECT_DIR$/js/RoomStats.ts" />
       </list>
     </option>
   </component>
@@ -399,6 +416,11 @@
       <created>1379327218347</created>
       <updated>1379327218347</updated>
     </task>
+    <task id="LOCAL-00001" summary="Hah. div. Not Canvas. &#10;&#10;Hah.&#10;&#10;*sob*">
+      <created>1380352996783</created>
+      <updated>1380352996783</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -423,9 +445,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32962137" sideWeight="0.49973643" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32962137" sideWeight="0.49973643" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33741647" sideWeight="0.49973643" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -453,7 +475,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="Hah. div. Not Canvas. &#10;&#10;Hah.&#10;&#10;*sob*" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hah. div. Not Canvas. &#10;&#10;Hah.&#10;&#10;*sob*" />
+    <MESSAGE value="Now the legend icons have labels" />
+    <option name="LAST_COMMIT_MESSAGE" value="Now the legend icons have labels" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -521,13 +544,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/vendor/kinetic.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="31" selection-start="1703" selection-end="1703" vertical-scroll-proportion="0.2705224" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="http://dojo/js/Interfaces/Room.ts">
       <provider selected="true" editor-type-id="httpFileEditor">
         <state />
@@ -537,15 +553,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="49" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/vendor/KineticJS.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="4246" selection-start="100480" selection-end="100480" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -584,23 +591,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/RoomStats.ts">
+    <entry file="file://$PROJECT_DIR$/js/vendor/KineticJS.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="85" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1734">
+        <state line="4" column="4246" selection-start="100480" selection-end="100480" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/Interfaces/Room.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="27" selection-start="660" selection-end="660" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="1887">
+        <state line="37" column="61" selection-start="1125" selection-end="1125" vertical-scroll-proportion="0.0" vertical-offset="267" max-vertical-offset="2091">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/RoomStats.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="36" selection-start="3931" selection-end="3931" vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="1751">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/Engine.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="9" selection-start="698" selection-end="698" vertical-scroll-proportion="0.6753472" vertical-offset="53" max-vertical-offset="629">
+        <state line="26" column="9" selection-start="698" selection-end="698" vertical-scroll-proportion="0.0" vertical-offset="53" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/vendor/kinetic.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="333" column="8" selection-start="10046" selection-end="10046" vertical-scroll-proportion="0.3321234" vertical-offset="5478" max-vertical-offset="8432">
           <folding />
         </state>
       </provider>

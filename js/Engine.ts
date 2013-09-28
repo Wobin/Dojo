@@ -19,7 +19,7 @@ module Engine{
         usedWidth = 0;
 
         RoomStats.Rooms.forEach(function(room){
-            LibraryLayer.add(room.GetLegend().image);
+            LibraryLayer.add(room.GetLegend().group);
         });
         LibraryStage.add(LibraryLayer);
     };

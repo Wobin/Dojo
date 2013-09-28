@@ -25,7 +25,7 @@ module Elements {
         public yCentre : number;
         public doorCount : number;
 
-        constructor(public id:number, public imageURL:string, public height:number, public width:number, doorList: Door[]) {
+        constructor(public id:number, public name: string, public imageURL:string, public height:number, public width:number, doorList: Door[]) {
             this.doors = {};
             for(var i = 0; i < doorList.length; i++)
             {
@@ -35,8 +35,9 @@ module Elements {
             this.xCentre = height/2;
             this.yCentre = width/2;
         }
-        Copy(imageURL : string, id: number) : RoomTemplate {
+        Copy(id: number, name : string, imageURL : string) : RoomTemplate {
             var room = jQuery.extend(true, {}, this);
+            room.name = name;
             room.imageURL = imageURL;
             room.id = id;
             return room;
@@ -64,9 +65,19 @@ module Elements {
         GetLegend() : RoomTile {
             var img = new Image();
             img.src = this.imageURL;
+
             var tile = new RoomTile();
+            tile.group = new Kinetic.Group({ draggable : true});
             tile.roomStats = this;
-            tile.image = new Kinetic.Image({ x :50, y: 50,  image : img, width: ScaleToThumbWidth(this.width, this.height), height: ScaleToThumbHeight(this.width, this.height), draggable : true });
+
+            tile.image = new Kinetic.Image({ x :0, y: 0,  image : img, width: ScaleToThumbWidth(this.width, this.height), height: ScaleToThumbHeight(this.width, this.height)});
+
+            tile.label = new Kinetic.Label({ y: tile.image.getHeight(), x : 0, opacity : 0.75  });
+            tile.label.add(new Kinetic.Tag({fill : 'white'}));
+            tile.label.add(new Kinetic.Text({ text : this.name, fill : 'black'}));
+            tile.label.setX((tile.image.getWidth() - tile.label.getText().getTextWidth())/2); // Centre the text
+            tile.group.add(tile.image).add(tile.label);
+
             return tile;
         }
 
@@ -85,7 +96,8 @@ module Elements {
 
     export class RoomTile {
         image : Kinetic.Image;
-
+        label : Kinetic.Label;
+        group : Kinetic.Group;
         roomStats: RoomTemplate;
         layer : Kinetic.Layer;
     }
