@@ -62,12 +62,12 @@ module Elements {
             tile.image = new Kinetic.Image({ image : img, width : this.width, height : this.height});
             return tile;
         }
-        GetLegend() : RoomTile {
+        GetLegend() : RoomIndex {
             var img = new Image();
             img.src = this.imageURL;
 
-            var tile = new RoomTile();
-            tile.group = new Kinetic.Group({ draggable : true, });
+            var tile = new RoomIndex();
+            tile.group = new Kinetic.Group({ draggable : false });
             tile.roomStats = this;
             // Generate the image
             tile.image = new Kinetic.Image({ x :0, y: 0,  image : img, width: ScaleToThumbWidth(this.width, this.height), height: ScaleToThumbHeight(this.width, this.height)});
@@ -100,10 +100,13 @@ module Elements {
 
     export class RoomTile {
         image : Kinetic.Image;
-        label : Kinetic.Label;
         group : Kinetic.Group;
         roomStats: RoomTemplate;
         layer : Kinetic.Layer;
+    }
+
+    export class RoomIndex extends RoomTile {
+        label : Kinetic.Label;
         getWidth() : number {
             var minX : number = 0;
             var maxX : number = 0;
@@ -117,7 +120,9 @@ module Elements {
             });
             return maxX - minX;
         }
+
     }
+
 
     export class Room {
         public id:number;

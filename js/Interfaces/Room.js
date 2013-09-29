@@ -6,6 +6,12 @@
 * To change this template use File | Settings | File Templates.
 */
 ///<reference path="../vendor/reference.d.ts"/>
+var __extends = this.__extends || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    __.prototype = b.prototype;
+    d.prototype = new __();
+};
 var Elements;
 (function (Elements) {
     var RoomTemplate = (function () {
@@ -54,8 +60,8 @@ var Elements;
             var img = new Image();
             img.src = this.imageURL;
 
-            var tile = new RoomTile();
-            tile.group = new Kinetic.Group({ draggable: true });
+            var tile = new RoomIndex();
+            tile.group = new Kinetic.Group({ draggable: false });
             tile.roomStats = this;
 
             // Generate the image
@@ -93,7 +99,16 @@ else
     var RoomTile = (function () {
         function RoomTile() {
         }
-        RoomTile.prototype.getWidth = function () {
+        return RoomTile;
+    })();
+    Elements.RoomTile = RoomTile;
+
+    var RoomIndex = (function (_super) {
+        __extends(RoomIndex, _super);
+        function RoomIndex() {
+            _super.apply(this, arguments);
+        }
+        RoomIndex.prototype.getWidth = function () {
             var minX = 0;
             var maxX = 0;
             this.group.getChildren().forEach(function (child) {
@@ -106,9 +121,9 @@ else
             });
             return maxX - minX;
         };
-        return RoomTile;
-    })();
-    Elements.RoomTile = RoomTile;
+        return RoomIndex;
+    })(RoomTile);
+    Elements.RoomIndex = RoomIndex;
 
     var Room = (function () {
         function Room(template) {

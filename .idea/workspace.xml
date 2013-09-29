@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cca46344-433e-4ce8-b848-f4d79ec25f85" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Engine.js.map" afterPath="$PROJECT_DIR$/js/Engine.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Engine.js" afterPath="$PROJECT_DIR$/js/Engine.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Engine.ts" afterPath="$PROJECT_DIR$/js/Engine.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Interfaces/Room.js.map" afterPath="$PROJECT_DIR$/js/Interfaces/Room.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Interfaces/Room.js" afterPath="$PROJECT_DIR$/js/Interfaces/Room.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Interfaces/Room.ts" afterPath="$PROJECT_DIR$/js/Interfaces/Room.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/vendor/kinetic.d.ts" afterPath="$PROJECT_DIR$/js/vendor/kinetic.d.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Dojo.iws" />
@@ -71,7 +67,7 @@
       <file leaf-file-name="Room.ts" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/Interfaces/Room.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="63" selection-start="2415" selection-end="2415" vertical-scroll-proportion="0.19805825" vertical-offset="1071" max-vertical-offset="2380">
+            <state line="100" column="4" selection-start="3563" selection-end="3563" vertical-scroll-proportion="0.86796117" vertical-offset="1253" max-vertical-offset="2465">
               <folding />
             </state>
           </provider>
@@ -98,7 +94,7 @@
       <file leaf-file-name="Engine.ts" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/Engine.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="64" selection-start="764" selection-end="764" vertical-scroll-proportion="0.0" vertical-offset="91" max-vertical-offset="680">
+            <state line="32" column="49" selection-start="904" selection-end="904" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="680">
               <folding />
             </state>
           </provider>
@@ -107,7 +103,7 @@
       <file leaf-file-name="RoomStats.ts" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/RoomStats.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="36" selection-start="3931" selection-end="3931" vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="1751">
+            <state line="11" column="115" selection-start="286" selection-end="286" vertical-scroll-proportion="0.0" vertical-offset="16" max-vertical-offset="1751">
               <folding />
             </state>
           </provider>
@@ -368,7 +364,11 @@
       <created>1380356402080</created>
       <updated>1380356402080</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Centred the labels">
+      <created>1380358421610</created>
+      <updated>1380358421610</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -401,9 +401,9 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.68191963" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2551397" sideWeight="0.6024499" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3975501" sideWeight="0.6088561" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3975501" sideWeight="0.6088561" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3975501" sideWeight="0.5028993" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3975501" sideWeight="0.39114392" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31514478" sideWeight="0.49710068" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -424,7 +424,8 @@
     </option>
     <MESSAGE value="Hah. div. Not Canvas. &#10;&#10;Hah.&#10;&#10;*sob*" />
     <MESSAGE value="Now the legend icons have labels" />
-    <option name="LAST_COMMIT_MESSAGE" value="Now the legend icons have labels" />
+    <MESSAGE value="Centred the labels" />
+    <option name="LAST_COMMIT_MESSAGE" value="Centred the labels" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -539,13 +540,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/RoomStats.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="36" selection-start="3931" selection-end="3931" vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="1751">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/plugins.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="528">
@@ -560,16 +554,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/RoomStats.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="115" selection-start="286" selection-end="286" vertical-scroll-proportion="0.0" vertical-offset="16" max-vertical-offset="1751">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/Engine.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="64" selection-start="764" selection-end="764" vertical-scroll-proportion="0.0" vertical-offset="91" max-vertical-offset="680">
+        <state line="32" column="49" selection-start="904" selection-end="904" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="680">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/Interfaces/Room.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="63" selection-start="2415" selection-end="2415" vertical-scroll-proportion="0.19805825" vertical-offset="1071" max-vertical-offset="2380">
+        <state line="100" column="4" selection-start="3563" selection-end="3563" vertical-scroll-proportion="0.86796117" vertical-offset="1253" max-vertical-offset="2465">
           <folding />
         </state>
       </provider>
