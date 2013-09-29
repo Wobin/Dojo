@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cca46344-433e-4ce8-b848-f4d79ec25f85" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Engine.js.map" afterPath="$PROJECT_DIR$/js/Engine.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Engine.js" afterPath="$PROJECT_DIR$/js/Engine.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Engine.ts" afterPath="$PROJECT_DIR$/js/Engine.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Interfaces/Room.js.map" afterPath="$PROJECT_DIR$/js/Interfaces/Room.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Interfaces/Room.js" afterPath="$PROJECT_DIR$/js/Interfaces/Room.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Interfaces/Room.ts" afterPath="$PROJECT_DIR$/js/Interfaces/Room.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Dojo.iws" />
@@ -31,7 +35,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="0" selection-start="2793" selection-end="2793" vertical-scroll-proportion="-9.884615" vertical-offset="763" max-vertical-offset="1326">
+            <state line="28" column="12" selection-start="1146" selection-end="1146" vertical-scroll-proportion="-11.115385" vertical-offset="187" max-vertical-offset="1343">
               <folding />
             </state>
           </provider>
@@ -55,20 +59,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reference.d.ts" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/vendor/reference.d.ts">
+      <file leaf-file-name="Room.ts" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/Interfaces/Room.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="49" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
+            <state line="127" column="42" selection-start="4798" selection-end="4798" vertical-scroll-proportion="0.7051793" vertical-offset="1805" max-vertical-offset="2618">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Room.ts" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/Interfaces/Room.ts">
+      <file leaf-file-name="Room.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/Interfaces/Room.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="4" selection-start="3563" selection-end="3563" vertical-scroll-proportion="0.86796117" vertical-offset="1253" max-vertical-offset="2465">
-              <folding />
+            <state line="115" column="54" selection-start="4425" selection-end="4425" vertical-scroll-proportion="0.0" vertical-offset="1598" max-vertical-offset="2703">
+              <folding>
+                <marker date="1380494109001" expanded="true" signature="2860:4049" placeholder="{...}" />
+                <marker date="1380494109001" expanded="true" signature="3855:4023" placeholder="{...}" />
+                <marker date="1380494109001" expanded="true" signature="4203:4674" placeholder="{...}" />
+                <marker date="1380494109001" expanded="true" signature="4349:4544" placeholder="{...}" />
+                <marker date="1380494109001" expanded="true" signature="4410:4443" placeholder="{...}" />
+                <marker date="1380494109001" expanded="true" signature="4879:4890" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,8 +96,19 @@
       <file leaf-file-name="kinetic.d.ts" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/vendor/kinetic.d.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="24" selection-start="3677" selection-end="3677" vertical-scroll-proportion="0.0" vertical-offset="1504" max-vertical-offset="8466">
+            <state line="69" column="10" selection-start="2595" selection-end="2598" vertical-scroll-proportion="-6.52" vertical-offset="1010" max-vertical-offset="8466">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery.d.ts" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/vendor/jquery.d.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="390" column="28" selection-start="13178" selection-end="13184" vertical-scroll-proportion="-7.32" vertical-offset="6447" max-vertical-offset="13974">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -94,7 +116,7 @@
       <file leaf-file-name="Engine.ts" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/Engine.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="49" selection-start="904" selection-end="904" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="680">
+            <state line="31" column="9" selection-start="1006" selection-end="1006" vertical-scroll-proportion="0.0" vertical-offset="138" max-vertical-offset="714">
               <folding />
             </state>
           </provider>
@@ -106,13 +128,6 @@
             <state line="11" column="115" selection-start="286" selection-end="286" vertical-scroll-proportion="0.0" vertical-offset="16" max-vertical-offset="1751">
               <folding />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fabric.all.min.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="http://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.2.0/fabric.all.min.js">
-          <provider selected="true" editor-type-id="httpFileEditor">
-            <state />
           </provider>
         </entry>
       </file>
@@ -146,8 +161,8 @@
         <option value="$PROJECT_DIR$/js/vendor/reference.d.ts" />
         <option value="dojo/js/Interfaces/Room.ts" />
         <option value="$PROJECT_DIR$/js/vendor/KineticJS.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/RoomStats.ts" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/vendor/kinetic.d.ts" />
         <option value="$PROJECT_DIR$/js/Engine.ts" />
         <option value="$PROJECT_DIR$/js/Interfaces/Room.ts" />
@@ -265,6 +280,42 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dojo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dojo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Interfaces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dojo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dojo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -368,7 +419,11 @@
       <created>1380358421610</created>
       <updated>1380358421610</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Now undraggable to prep for cloning">
+      <created>1380488880911</created>
+      <updated>1380488880911</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -425,7 +480,9 @@
     <MESSAGE value="Hah. div. Not Canvas. &#10;&#10;Hah.&#10;&#10;*sob*" />
     <MESSAGE value="Now the legend icons have labels" />
     <MESSAGE value="Centred the labels" />
-    <option name="LAST_COMMIT_MESSAGE" value="Centred the labels" />
+    <MESSAGE value="Now undraggable to prep for cloning" />
+    <MESSAGE value="Now trying to clone" />
+    <option name="LAST_COMMIT_MESSAGE" value="Now trying to clone" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -465,29 +522,19 @@
           <line>22</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/js/Interfaces/Room.ts</url>
+          <line>113</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="48" />
+      <option name="time" value="50" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="http://dojo/js/vendor/fabric.all.min.js">
-      <provider selected="true" editor-type-id="httpFileEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="http://dojo/js/Engine.ts">
-      <provider selected="true" editor-type-id="httpFileEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="http://dojo/js/Engine.js">
-      <provider selected="true" editor-type-id="httpFileEditor">
-        <state />
-      </provider>
-    </entry>
     <entry file="http://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.2.0/fabric.all.min.js">
       <provider selected="true" editor-type-id="httpFileEditor">
         <state />
@@ -526,13 +573,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="0" selection-start="2793" selection-end="2793" vertical-scroll-proportion="-9.884615" vertical-offset="763" max-vertical-offset="1326">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/vendor/KineticJS.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="4246" selection-start="100480" selection-end="100480" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
@@ -547,13 +587,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/vendor/kinetic.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="24" selection-start="3677" selection-end="3677" vertical-scroll-proportion="0.0" vertical-offset="1504" max-vertical-offset="8466">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/RoomStats.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="115" selection-start="286" selection-end="286" vertical-scroll-proportion="0.0" vertical-offset="16" max-vertical-offset="1751">
@@ -561,16 +594,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="12" selection-start="1146" selection-end="1146" vertical-scroll-proportion="-11.115385" vertical-offset="187" max-vertical-offset="1343">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/vendor/jquery.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="390" column="28" selection-start="13178" selection-end="13184" vertical-scroll-proportion="-7.32" vertical-offset="6447" max-vertical-offset="13974">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/vendor/kinetic.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="10" selection-start="2595" selection-end="2598" vertical-scroll-proportion="-6.52" vertical-offset="1010" max-vertical-offset="8466">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="http://dojo/js/Interfaces/Room.js (old)">
+      <provider selected="true" editor-type-id="httpFileEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Interfaces/Room.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="115" column="54" selection-start="4425" selection-end="4425" vertical-scroll-proportion="0.0" vertical-offset="1598" max-vertical-offset="2703">
+          <folding>
+            <marker date="1380494109001" expanded="true" signature="2860:4049" placeholder="{...}" />
+            <marker date="1380494109001" expanded="true" signature="3855:4023" placeholder="{...}" />
+            <marker date="1380494109001" expanded="true" signature="4203:4674" placeholder="{...}" />
+            <marker date="1380494109001" expanded="true" signature="4349:4544" placeholder="{...}" />
+            <marker date="1380494109001" expanded="true" signature="4410:4443" placeholder="{...}" />
+            <marker date="1380494109001" expanded="true" signature="4879:4890" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/Engine.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="49" selection-start="904" selection-end="904" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="680">
+        <state line="31" column="9" selection-start="1006" selection-end="1006" vertical-scroll-proportion="0.0" vertical-offset="138" max-vertical-offset="714">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/Interfaces/Room.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="4" selection-start="3563" selection-end="3563" vertical-scroll-proportion="0.86796117" vertical-offset="1253" max-vertical-offset="2465">
+        <state line="127" column="42" selection-start="4798" selection-end="4798" vertical-scroll-proportion="0.7051793" vertical-offset="1805" max-vertical-offset="2618">
           <folding />
         </state>
       </provider>

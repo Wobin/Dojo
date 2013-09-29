@@ -56,28 +56,8 @@ var Elements;
             tile.image = new Kinetic.Image({ image: img, width: this.width, height: this.height });
             return tile;
         };
-        RoomTemplate.prototype.GetLegend = function () {
-            var img = new Image();
-            img.src = this.imageURL;
-
-            var tile = new RoomIndex();
-            tile.group = new Kinetic.Group({ draggable: false });
-            tile.roomStats = this;
-
-            // Generate the image
-            tile.image = new Kinetic.Image({ x: 0, y: 0, image: img, width: ScaleToThumbWidth(this.width, this.height), height: ScaleToThumbHeight(this.width, this.height) });
-
-            // Generate the label
-            tile.label = new Kinetic.Label({ y: tile.image.getHeight(), x: 0, opacity: 0.75 });
-            tile.label.add(new Kinetic.Tag({ fill: 'white' }));
-            tile.label.add(new Kinetic.Text({ text: this.name, fill: 'black', width: 75, align: 'center' }));
-
-            // Centre the image to the text
-            tile.label.setX((tile.image.getWidth() - tile.label.getWidth()) / 2);
-
-            // group them up
-            tile.group.add(tile.image).add(tile.label);
-
+        RoomTemplate.prototype.GetLegend = function (gLayer) {
+            var tile = new RoomIndex(this, gLayer);
             return tile;
         };
         return RoomTemplate;
@@ -105,8 +85,36 @@ else
 
     var RoomIndex = (function (_super) {
         __extends(RoomIndex, _super);
-        function RoomIndex() {
-            _super.apply(this, arguments);
+        function RoomIndex(stats, layer) {
+            _super.call(this);
+            this.layer = layer;
+            var img = new Image();
+            img.src = stats.imageURL;
+            this.group = new Kinetic.Group({ draggable: false });
+            this.roomStats = stats;
+
+            // Generate the image
+            this.image = new Kinetic.Image({ x: 0, y: 0, image: img, width: ScaleToThumbWidth(this.roomStats.width, this.roomStats.height), height: ScaleToThumbHeight(this.roomStats.width, this.roomStats.height) });
+
+            // Generate the label
+            this.label = new Kinetic.Label({ y: this.image.getHeight(), x: 0, opacity: 0.75 });
+            this.label.add(new Kinetic.Tag({ fill: 'white' }));
+            this.label.add(new Kinetic.Text({ text: this.roomStats.name, fill: 'black', width: 75, align: 'center' }));
+
+            // Centre the image to the text
+            this.label.setX((this.image.getWidth() - this.label.getWidth()) / 2);
+
+            // group them up
+            this.group.add(this.image).add(this.label);
+            var _this = this;
+            this.image.on('mousedown', function () {
+                var newInstance = _this.roomStats.Clone();
+                newInstance.image.setDraggable("true");
+                var cursor = _this.layer.getStage().getMousePosition();
+                newInstance.image.setPosition(cursor.x, cursor.y);
+                _this.layer.add(newInstance.image);
+                return {};
+            });
         }
         RoomIndex.prototype.getWidth = function () {
             var minX = 0;

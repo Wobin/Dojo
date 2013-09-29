@@ -8,23 +8,25 @@
 ///<reference path="vendor/reference.d.ts"/>
 var Engine;
 (function (Engine) {
-    var LibraryStage;
+    var DraftingStage;
+    var GridLayer;
     var LibraryLayer;
     var usedWidth;
 
     function CreateLibrary() {
-        LibraryStage = new Kinetic.Stage({ container: "Library", width: 1700, height: 500 });
-        LibraryLayer = new Kinetic.Layer();
-
+        DraftingStage = new Kinetic.Stage({ container: "Drafting Board", width: window.innerWidth, height: window.innerHeight });
+        LibraryLayer = new Kinetic.Layer({ x: 0, y: 0 });
+        GridLayer = new Kinetic.Layer({ x: 0, y: 0 });
         usedWidth = 10;
 
         RoomStats.Rooms.forEach(function (room) {
-            var legend = room.GetLegend();
+            var legend = room.GetLegend(GridLayer);
             legend.group.setX(usedWidth);
             LibraryLayer.add(legend.group);
             usedWidth += legend.getWidth() + 5;
         });
-        LibraryStage.add(LibraryLayer);
+        DraftingStage.add(LibraryLayer);
+        DraftingStage.add(GridLayer);
     }
     Engine.CreateLibrary = CreateLibrary;
     ;
