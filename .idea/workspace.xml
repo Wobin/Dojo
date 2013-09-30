@@ -2,17 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cca46344-433e-4ce8-b848-f4d79ec25f85" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/vendor/jquery.mousewheel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Engine.js.map" afterPath="$PROJECT_DIR$/js/Engine.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Engine.js" afterPath="$PROJECT_DIR$/js/Engine.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Engine.ts" afterPath="$PROJECT_DIR$/js/Engine.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Interfaces/Room.js.map" afterPath="$PROJECT_DIR$/js/Interfaces/Room.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Interfaces/Room.js" afterPath="$PROJECT_DIR$/js/Interfaces/Room.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Interfaces/Room.ts" afterPath="$PROJECT_DIR$/js/Interfaces/Room.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/vendor/jquery.d.ts" afterPath="$PROJECT_DIR$/js/vendor/jquery.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/vendor/kinetic.d.ts" afterPath="$PROJECT_DIR$/js/vendor/kinetic.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/vendor/reference.d.ts" afterPath="$PROJECT_DIR$/js/vendor/reference.d.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Dojo.iws" />
@@ -97,7 +86,7 @@
       <file leaf-file-name="Engine.ts" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/Engine.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="65" selection-start="1256" selection-end="1256" vertical-scroll-proportion="0.6815534" vertical-offset="261" max-vertical-offset="884">
+            <state line="35" column="43" selection-start="1255" selection-end="1255" vertical-scroll-proportion="0.5798611" vertical-offset="261" max-vertical-offset="884">
               <folding />
             </state>
           </provider>
@@ -409,7 +398,11 @@
       <created>1380494255021</created>
       <updated>1380494255021</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Now rotates on mousescroll. Not sure if this is really the best way to do it.">
+      <created>1380557613352</created>
+      <updated>1380557613352</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -434,19 +427,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.49973643" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33741647" sideWeight="0.49973643" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.68191963" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2551397" sideWeight="0.6024499" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2551397" sideWeight="0.6703786" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3975501" sideWeight="0.6088561" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3975501" sideWeight="0.5028993" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32962137" sideWeight="0.5002636" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31514478" sideWeight="0.49710068" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32962137" sideWeight="0.49973643" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -468,7 +461,8 @@
     <MESSAGE value="Centred the labels" />
     <MESSAGE value="Now undraggable to prep for cloning" />
     <MESSAGE value="Now trying to clone" />
-    <option name="LAST_COMMIT_MESSAGE" value="Now trying to clone" />
+    <MESSAGE value="Now rotates on mousescroll. Not sure if this is really the best way to do it." />
+    <option name="LAST_COMMIT_MESSAGE" value="Now rotates on mousescroll. Not sure if this is really the best way to do it." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -586,7 +580,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/Engine.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="65" selection-start="1256" selection-end="1256" vertical-scroll-proportion="0.6815534" vertical-offset="261" max-vertical-offset="884">
+        <state line="35" column="43" selection-start="1255" selection-end="1255" vertical-scroll-proportion="0.5798611" vertical-offset="261" max-vertical-offset="884">
           <folding />
         </state>
       </provider>
