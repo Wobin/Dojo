@@ -55,11 +55,13 @@ module Elements {
             return currentDoors;
         }
         Clone(): RoomTile {
-            var img = new Image();
-            var tile = new RoomTile();
+            var tile = new RoomTile(this);
             tile.roomStats = this;
-            img.src = this.imageURL;
-            tile.image = new Kinetic.Image({ image : img, width : this.width, height : this.height});
+
+            tile.image.setWidth(this.width)
+            tile.image.setHeight(this.height);
+
+            tile.image.setDraggable("true");
             return tile;
         }
         GetLegend(gLayer : Kinetic.Layer) : RoomIndex {
@@ -81,23 +83,34 @@ module Elements {
     }
 
     export class RoomTile {
+        constructor(public roomStats : RoomTemplate){
+            var img = new Image();
+            img.src = roomStats.imageURL;
+            this.image = new Kinetic.Image({image : img, width : roomStats.width, height : roomStats.height, draggable : true, offset : {x :roomStats.width/2, y :roomStats.height/2}});
+            var _this = this;
+            this.image.on("mouseover", function() {
+                Engine.scrolling = _this.image;
+                return {};
+            })
+            this.image.on("mouseout",function() { Engine.scrolling = null; return { };})
+
+
+        }
         image : Kinetic.Image;
         group : Kinetic.Group;
-        roomStats: RoomTemplate;
         layer : Kinetic.Layer;
+
     }
 
     export class RoomIndex extends RoomTile {
         label : Kinetic.Label;
         constructor(stats :RoomTemplate, public layer : Kinetic.Layer) {
-            super();
-            var img = new Image();
-            img.src = stats.imageURL;
+            super(stats);
             this.group = new Kinetic.Group({ draggable : false });
-            this.roomStats = stats;
             // Generate the image
-            this.image = new Kinetic.Image({ x :0, y: 0,  image : img, width: ScaleToThumbWidth(this.roomStats.width, this.roomStats.height), height: ScaleToThumbHeight(this.roomStats.width, this.roomStats.height)});
-
+            this.image.setWidth( ScaleToThumbWidth(this.roomStats.width, this.roomStats.height));
+            this.image.setHeight(ScaleToThumbHeight(this.roomStats.width, this.roomStats.height));
+            this.image.setOffset(0,0);
             // Generate the label
             this.label = new Kinetic.Label({ y: this.image.getHeight(), x : 0, opacity : 0.75  });
             this.label.add(new Kinetic.Tag({fill : 'white'}));
@@ -110,10 +123,10 @@ module Elements {
             var _this = this;
             this.image.on('mousedown', function(){
                 var newInstance = _this.roomStats.Clone();
-                newInstance.image.setDraggable("true");
                 var cursor = _this.layer.getStage().getMousePosition();
                 newInstance.image.setPosition(cursor.x, cursor.y);
                 _this.layer.add(newInstance.image);
+                newInstance.image.startDrag();
                 return {};
             });
         }
@@ -140,6 +153,10 @@ module Elements {
 
         }
     }
+    export class Stage extends Kinetic.Stage {
+        public scrolling : boolean;
+    }
+
     export class Door implements IDoor {
         constructor(public id:number, public x:number, public y:number) {
         }

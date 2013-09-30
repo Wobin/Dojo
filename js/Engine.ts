@@ -12,21 +12,31 @@ module Engine{
     var GridLayer : Kinetic.Layer;
     var LibraryLayer : Kinetic.Layer;
     var usedWidth : number;
+    export var scrolling : Kinetic.Image;
 
     export function CreateLibrary() {
-        DraftingStage = new Kinetic.Stage({container : "Drafting Board", width : window.innerWidth, height: window.innerHeight});
+        DraftingStage = new Kinetic.Stage({container : "DraftingBoard", width : window.innerWidth, height: window.innerHeight});
         LibraryLayer = new Kinetic.Layer({x: 0, y: 0});
-        GridLayer = new Kinetic.Layer({x: 0, y: 0});
         usedWidth = 10;
 
         RoomStats.Rooms.forEach(function(room){
-            var legend = room.GetLegend(GridLayer);
+            var legend = room.GetLegend(LibraryLayer);
             legend.group.setX(usedWidth);
             LibraryLayer.add(legend.group);
             usedWidth += legend.getWidth() + 5;
         });
         DraftingStage.add(LibraryLayer);
-        DraftingStage.add(GridLayer);
+        var _this = this;
+        $("#DraftingBoard").mousewheel(function(event, delta, deltaX, deltaY){
+            if(Engine.scrolling != null)
+            {
+                Engine.scrolling.rotateDeg(90);
+                Engine.scrolling.getLayer().draw();
+                event.preventDefault();
+            }
+
+        })
+
     };
 
 document.addEventListener('DOMContentLoaded', function () {

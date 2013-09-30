@@ -611,6 +611,10 @@ interface JQuery {
     mouseup(eventData: any, handler: (eventObject: JQueryMouseEventObject) => any): JQuery;
     mouseup(handler: (eventObject: JQueryMouseEventObject) => any): JQuery;
 
+    mousewheel(): JQuery;
+    mousewheel(handler: any) : JQuery;
+    unmousewheel(handler: any) :JQuery;
+
     off(events?: string, selector?: any, handler?: (eventObject: JQueryEventObject) => any): JQuery;
     off(eventsMap: { [key: string]: any; }, selector?: any): JQuery;
 

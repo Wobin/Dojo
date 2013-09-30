@@ -92,6 +92,8 @@ declare module Kinetic {
         simulate(eventType: string): void;
         toDataURL(config: any): void;
         transitionTo(config: any): void;
+        startDrag(): void;
+        stopDrag() : void;
     }
 
     class Container extends Node {
