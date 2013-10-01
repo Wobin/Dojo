@@ -125,8 +125,9 @@ module Elements {
                 var newInstance = _this.roomStats.Clone();
                 var cursor = _this.layer.getStage().getMousePosition();
                 newInstance.image.setPosition(cursor.x, cursor.y);
-                _this.layer.add(newInstance.image);
+                Engine.GridLayer.add(newInstance.image);
                 newInstance.image.startDrag();
+                Engine.TileList.push(newInstance);
                 return {};
             });
         }
@@ -153,8 +154,11 @@ module Elements {
 
         }
     }
-    export class Stage extends Kinetic.Stage {
-        public scrolling : boolean;
+    export class TileConnection {
+        public Tile1 : RoomTile;
+        public Door1 : Door;
+        public Tile2 : RoomTile;
+        public Door2 : Door;
     }
 
     export class Door implements IDoor {

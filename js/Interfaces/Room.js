@@ -125,8 +125,9 @@ else
                 var newInstance = _this.roomStats.Clone();
                 var cursor = _this.layer.getStage().getMousePosition();
                 newInstance.image.setPosition(cursor.x, cursor.y);
-                _this.layer.add(newInstance.image);
+                Engine.GridLayer.add(newInstance.image);
                 newInstance.image.startDrag();
+                Engine.TileList.push(newInstance);
                 return {};
             });
         }
@@ -154,14 +155,12 @@ else
         return Room;
     })();
     Elements.Room = Room;
-    var Stage = (function (_super) {
-        __extends(Stage, _super);
-        function Stage() {
-            _super.apply(this, arguments);
+    var TileConnection = (function () {
+        function TileConnection() {
         }
-        return Stage;
-    })(Kinetic.Stage);
-    Elements.Stage = Stage;
+        return TileConnection;
+    })();
+    Elements.TileConnection = TileConnection;
 
     var Door = (function () {
         function Door(id, x, y) {

@@ -9,14 +9,17 @@
 var Engine;
 (function (Engine) {
     var DraftingStage;
-    var GridLayer;
+    Engine.GridLayer;
     var LibraryLayer;
     var usedWidth;
     Engine.scrolling;
+    Engine.TileList;
 
     function CreateLibrary() {
         DraftingStage = new Kinetic.Stage({ container: "DraftingBoard", width: window.innerWidth, height: window.innerHeight });
-        LibraryLayer = new Kinetic.Layer({ x: 0, y: 0 });
+        LibraryLayer = new Kinetic.Layer();
+        Engine.GridLayer = new Kinetic.Layer();
+        Engine.TileList = [];
         usedWidth = 10;
 
         RoomStats.Rooms.forEach(function (room) {
@@ -25,8 +28,10 @@ var Engine;
             LibraryLayer.add(legend.group);
             usedWidth += legend.getWidth() + 5;
         });
-        DraftingStage.add(LibraryLayer);
+        DraftingStage.add(LibraryLayer).add(Engine.GridLayer);
+
         var _this = this;
+
         $("#DraftingBoard").mousewheel(function (event, delta, deltaX, deltaY) {
             if (Engine.scrolling != null) {
                 Engine.scrolling.rotateDeg(90);
@@ -37,6 +42,13 @@ var Engine;
     }
     Engine.CreateLibrary = CreateLibrary;
     ;
+
+    function GetClosestAvailableDoors(CurrentTile) {
+        var link = new Elements.TileConnection();
+        link.Tile1 = CurrentTile;
+        return link;
+    }
+    Engine.GetClosestAvailableDoors = GetClosestAvailableDoors;
 
     document.addEventListener('DOMContentLoaded', function () {
         Engine.CreateLibrary();

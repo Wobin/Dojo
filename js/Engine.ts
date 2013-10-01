@@ -9,14 +9,17 @@
 
 module Engine{
     var DraftingStage : Kinetic.Stage;
-    var GridLayer : Kinetic.Layer;
+    export var GridLayer : Kinetic.Layer;
     var LibraryLayer : Kinetic.Layer;
     var usedWidth : number;
     export var scrolling : Kinetic.Image;
+    export var TileList : Elements.RoomTile[];
 
     export function CreateLibrary() {
         DraftingStage = new Kinetic.Stage({container : "DraftingBoard", width : window.innerWidth, height: window.innerHeight});
-        LibraryLayer = new Kinetic.Layer({x: 0, y: 0});
+        LibraryLayer = new Kinetic.Layer();
+        GridLayer = new Kinetic.Layer();
+        TileList = [];
         usedWidth = 10;
 
         RoomStats.Rooms.forEach(function(room){
@@ -25,8 +28,10 @@ module Engine{
             LibraryLayer.add(legend.group);
             usedWidth += legend.getWidth() + 5;
         });
-        DraftingStage.add(LibraryLayer);
+        DraftingStage.add(LibraryLayer).add(GridLayer);
+
         var _this = this;
+
         $("#DraftingBoard").mousewheel(function(event, delta, deltaX, deltaY){
             if(Engine.scrolling != null)
             {
@@ -38,6 +43,13 @@ module Engine{
         })
 
     };
+
+    export function GetClosestAvailableDoors(CurrentTile : Elements.RoomTile) : Elements.TileConnection
+    {
+        var link = new Elements.TileConnection();
+        link.Tile1 = CurrentTile;
+        return link;
+    }
 
 document.addEventListener('DOMContentLoaded', function () {
    Engine.CreateLibrary();
