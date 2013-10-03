@@ -10,6 +10,9 @@
 module Engine{
     var DraftingStage : Kinetic.Stage;
     export var GridLayer : Kinetic.Layer;
+    export var DebugLayer : Kinetic.Layer;
+    export var DebugText : Kinetic.Text;
+    export var Debug : boolean = true;
     var LibraryLayer : Kinetic.Layer;
     var usedWidth : number;
     export var scrolling : Kinetic.Image;
@@ -19,16 +22,33 @@ module Engine{
         DraftingStage = new Kinetic.Stage({container : "DraftingBoard", width : window.innerWidth, height: window.innerHeight});
         LibraryLayer = new Kinetic.Layer();
         GridLayer = new Kinetic.Layer();
+        DebugLayer = new Kinetic.Layer();
         TileList = [];
         usedWidth = 10;
 
         RoomStats.Rooms.forEach(function(room){
-            var legend = room.GetLegend(LibraryLayer);
+            var legend = room.GetLegend();
             legend.group.setX(usedWidth);
             LibraryLayer.add(legend.group);
             usedWidth += legend.getWidth() + 5;
         });
         DraftingStage.add(LibraryLayer).add(GridLayer);
+
+        if(Debug)
+        {
+            DraftingStage.add(DebugLayer);
+            DebugText = new Kinetic.Text({
+                x: 10,
+                y: 150,
+                fontFamily: 'Calibri',
+                fontSize: 24,
+                text: '',
+                fill: 'black'
+            });
+
+            DebugLayer.add(DebugText);
+        }
+
 
         var _this = this;
 
@@ -51,6 +71,15 @@ module Engine{
         return link;
     }
 
+    export function HasLink(Tile: Elements.RoomTile) : boolean
+    {
+        //if(Tile)
+        return false;
+    }
+    export function Connect(Connector : Elements.TileConnection )
+    {
+
+    }
 document.addEventListener('DOMContentLoaded', function () {
    Engine.CreateLibrary();
 });

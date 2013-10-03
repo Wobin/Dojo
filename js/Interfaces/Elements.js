@@ -15,12 +15,13 @@ var __extends = this.__extends || function (d, b) {
 var Elements;
 (function (Elements) {
     var RoomTemplate = (function () {
-        function RoomTemplate(id, name, imageURL, height, width, doorList) {
+        function RoomTemplate(id, name, imageURL, width, height, doorList) {
             this.id = id;
             this.name = name;
             this.imageURL = imageURL;
-            this.height = height;
             this.width = width;
+            this.height = height;
+            this.doorCount = 0;
             this.doors = {};
             for (var i = 0; i < doorList.length; i++) {
                 this.doorCount++;
@@ -30,27 +31,16 @@ var Elements;
             this.yCentre = width / 2;
         }
         RoomTemplate.prototype.Copy = function (id, name, imageURL) {
-            var room = jQuery.extend(true, {}, this);
+            var room = Utility.Clone(this);
             room.name = name;
             room.imageURL = imageURL;
             room.id = id;
             return room;
         };
 
-        RoomTemplate.prototype.GetCoords = function (rotation) {
-            var currentDoors;
-            for (var i = 1; i <= this.doorCount; i++) {
-                var door = this.doors[i];
-                var x = this.xCentre + Math.cos(rotation) * (door.x - this.xCentre) - Math.sin(rotation) * (door.y - this.yCentre);
-                var y = this.yCentre + Math.sin(rotation) * (door.x - this.xCentre) - Math.cos(rotation) * (door.y - this.yCentre);
-                currentDoors.push(new Door(door.id, x, y));
-            }
-            ;
-            return currentDoors;
-        };
         RoomTemplate.prototype.Clone = function () {
             var tile = new RoomTile(this);
-            tile.roomStats = this;
+            tile.roomStats = Utility.Clone(this);
 
             tile.image.setWidth(this.width);
             tile.image.setHeight(this.height);
@@ -58,25 +48,13 @@ var Elements;
             tile.image.setDraggable("true");
             return tile;
         };
-        RoomTemplate.prototype.GetLegend = function (gLayer) {
-            var tile = new RoomIndex(this, gLayer);
+        RoomTemplate.prototype.GetLegend = function () {
+            var tile = new RoomIndex(this);
             return tile;
         };
         return RoomTemplate;
     })();
     Elements.RoomTemplate = RoomTemplate;
-    function ScaleToThumbWidth(width, height) {
-        if (width >= height)
-            return 75;
-else
-            return width / height * 75;
-    }
-    function ScaleToThumbHeight(width, height) {
-        if (height >= width)
-            return 75;
-else
-            return height / width * 75;
-    }
 
     var RoomTile = (function () {
         function RoomTile(roomStats) {
@@ -85,7 +63,14 @@ else
             img.src = roomStats.imageURL;
             this.image = new Kinetic.Image({ image: img, width: roomStats.width, height: roomStats.height, draggable: true, offset: { x: roomStats.width / 2, y: roomStats.height / 2 } });
             var _this = this;
+
+            if (Engine.Debug)
+                Utility.debugImage(this.image);
+
             this.image.on("mouseover", function () {
+                if (Engine.HasLink(_this))
+                    return {};
+
                 Engine.scrolling = _this.image;
                 return {};
             });
@@ -100,14 +85,13 @@ else
 
     var RoomIndex = (function (_super) {
         __extends(RoomIndex, _super);
-        function RoomIndex(stats, layer) {
+        function RoomIndex(stats) {
             _super.call(this, stats);
-            this.layer = layer;
             this.group = new Kinetic.Group({ draggable: false });
 
             // Generate the image
-            this.image.setWidth(ScaleToThumbWidth(this.roomStats.width, this.roomStats.height));
-            this.image.setHeight(ScaleToThumbHeight(this.roomStats.width, this.roomStats.height));
+            this.image.setWidth(Utility.ScaleToThumbWidth(this.roomStats.width, this.roomStats.height));
+            this.image.setHeight(Utility.ScaleToThumbHeight(this.roomStats.width, this.roomStats.height));
             this.image.setOffset(0, 0);
 
             // Generate the label
@@ -123,7 +107,7 @@ else
             var _this = this;
             this.image.on('mousedown', function () {
                 var newInstance = _this.roomStats.Clone();
-                var cursor = _this.layer.getStage().getMousePosition();
+                var cursor = _this.group.getStage().getMousePosition();
                 newInstance.image.setPosition(cursor.x, cursor.y);
                 Engine.GridLayer.add(newInstance.image);
                 newInstance.image.startDrag();
@@ -172,4 +156,4 @@ else
     })();
     Elements.Door = Door;
 })(Elements || (Elements = {}));
-//# sourceMappingURL=Room.js.map
+//# sourceMappingURL=Elements.js.map

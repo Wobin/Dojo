@@ -9,12 +9,12 @@
 module RoomStats {
 
 // Halls
-    var ClanHall : Elements.RoomTemplate = new Elements.RoomTemplate(1, "Clan Hall", "img/Clan Hall.png", 140, 60, [ new Elements.Door(1, 30, 140),
-                                                                            new Elements.Door(2, 30, 0)] );
+    var ClanHall : Elements.RoomTemplate = new Elements.RoomTemplate(1, "Clan Hall", "img/Clan Hall.png", 60, 140, [ new Elements.Door(1, 0, -70),
+                                                                            new Elements.Door(2, 0, 70)] );
     var GreatHall : Elements.RoomTemplate = ClanHall.Copy(2, "Great Hall", "img/Great Hall.png");
 
-    var GreaterHall : Elements.RoomTemplate = new Elements.RoomTemplate(3, "Greater Hall","img/Greater Hall.png", 160, 140,[   new Elements.Door(1, 80, 140),
-                                                                                    new Elements.Door(2, 80, 0)]);
+    var GreaterHall : Elements.RoomTemplate = new Elements.RoomTemplate(3, "Greater Hall","img/Greater Hall.png", 140, 160, [   new Elements.Door(1, 0, -80),
+                                                                                    new Elements.Door(2, 0, 80)]);
 
     var GrandHall : Elements.RoomTemplate = new Elements.RoomTemplate(4, "Grand Hall", "img/Grand Hall.png", 135, 135,[   new Elements.Door(1, 68, 135),
                                                                                 new Elements.Door(2, 0, 96),
@@ -40,16 +40,16 @@ module RoomStats {
                                                                             new Elements.Door(2, 0, 5),
                                                                             new Elements.Door(3, 70, 5)]);
 
-    var LiftDown = new Elements.RoomTemplate(102, "Elevator Down", "img/Elevator Down.png", 45, 25, [new Elements.Door(1, 12,40)]);
+    var LiftDown = new Elements.RoomTemplate(102, "Elevator Down", "img/Elevator Down.png", 25, 45, [new Elements.Door(1, 12,40)]);
 
     var LiftUp = LiftDown.Copy( 103, "Elevator Up", "img/Elevator Up.png");
 
     var LConnector = new Elements.RoomTemplate(104, "L Connector", "img/L Connector.png", 40, 40, [new Elements.Door(1, 35, 40),
                                                                                 new Elements.Door(2, 0, 5)]);
-    var LongConnector = new Elements.RoomTemplate(105, "Long Connector", "img/Long Connector.png", 75, 12, [
+    var LongConnector = new Elements.RoomTemplate(105, "Long Connector", "img/Long Connector.png", 12, 75, [
                                                                                 new Elements.Door(1, 6, 75),
                                                                                 new Elements.Door(2, 6, 0)]);
-    var ShortConnector = new Elements.RoomTemplate(106, "Short Connector", "img/Short Connector.png", 33, 12, [
+    var ShortConnector = new Elements.RoomTemplate(106, "Short Connector", "img/Short Connector.png", 12, 33, [
                                                                                 new Elements.Door(1, 6, 33),
                                                                                 new Elements.Door(2, 6, 0)]);
 // Function Rooms
@@ -60,14 +60,14 @@ module RoomStats {
     var ChemLab : Elements.RoomTemplate = BioLab.Copy(1002, "Chem Lab", "img/Chem Lab.png");
     var EnergyLab : Elements.RoomTemplate = BioLab.Copy(1003, "Energy Lab", "img/Energy Lab.png" );
     var Oracle : Elements.RoomTemplate = BioLab.Copy(1004, "Oracle", "img/Oracle.png");
-    var Reactor : Elements.RoomTemplate = new Elements.RoomTemplate(1005, "Reactor", "img/Reactor.png", 65, 60, [new Elements.Door(1, 30, 65)]);
+    var Reactor : Elements.RoomTemplate = new Elements.RoomTemplate(1005, "Reactor", "img/Reactor.png", 60, 65, [new Elements.Door(1, 30, 65)]);
 
-    var Barracks : Elements.RoomTemplate = new Elements.RoomTemplate(1006, "Barracks","img/Barracks.png",55, 65, [new Elements.Door(1, 32, 55)] );
+    var Barracks : Elements.RoomTemplate = new Elements.RoomTemplate(1006, "Barracks","img/Barracks.png",65, 55, [new Elements.Door(1, 32, 55)] );
     var Garden : Elements.RoomTemplate = new Elements.RoomTemplate(1007, "Garden", "img/Garden.png", 70, 70, [new Elements.Door(1, 35, 70 ),
                                                                         new Elements.Door(2, 0, 35),
                                                                         new Elements.Door(3, 35, 0),
                                                                         new Elements.Door(4, 70, 35)]);
-    var Parkour = new Elements.RoomTemplate(1008, "Parkour Room", "img/Parkour.png", 425, 360, [new Elements.Door(1, 175, 425)]);
+    var Parkour = new Elements.RoomTemplate(1008, "Parkour Room", "img/Parkour.png", 360, 425, [new Elements.Door(1, 175, 425)]);
 
    export var Rooms =
        [
