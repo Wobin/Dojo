@@ -16,10 +16,9 @@ module Elements {
     export interface Sheaf {
         [id : number] : Door;
     }
-    export interface Connections {
-        [doorNumber :number ] : number;
-    }
+
     export class RoomTemplate {
+        public static idSeed = 0;
         public doors:Sheaf;
         public xCentre : number;
         public yCentre : number;
@@ -27,11 +26,9 @@ module Elements {
 
         constructor(public id:number, public name: string, public imageURL:string, public width:number, public height:number, doorList: Door[]) {
             this.doors = {};
-            for(var i = 0; i < doorList.length; i++)
-            {
-                this.doorCount++;
-                this.doors[doorList[i].id] = doorList[i];
-            }
+            this.doorCount = doorList.length;
+            var _this = this;
+            doorList.forEach(function(door : Door) {_this.doors[door.id] = door;})
             this.xCentre = height/2;
             this.yCentre = width/2;
         }
@@ -45,8 +42,8 @@ module Elements {
         }
 
         Clone(): RoomTile {
-            var tile = new RoomTile(this);
-            tile.roomStats = Utility.Clone(this);
+            var tile = new RoomTile(this, RoomTemplate.idSeed++);
+           // tile.roomStats = Utility.Clone(this);
 
             tile.image.setWidth(this.width)
             tile.image.setHeight(this.height);
@@ -62,7 +59,8 @@ module Elements {
 
     export class RoomTile {
         image : Kinetic.Image;
-        constructor(public roomStats : RoomTemplate){
+        rotation : number = 0;
+        constructor(public roomStats : RoomTemplate, public id : number){
             var img = new Image();
             img.src = roomStats.imageURL;
             this.image = new Kinetic.Image({image : img, width : roomStats.width, height : roomStats.height, draggable : true, offset : {x :roomStats.width/2, y :roomStats.height/2}});
@@ -72,15 +70,26 @@ module Elements {
                 Utility.debugImage(this.image);
 
             this.image.on("mouseover", function() {
-
-
-                // If we're linked up, don't move
-                if(Engine.HasLink(_this)) return {};
-
-                Engine.scrolling = _this.image;
+                Engine.scrolling = _this;
                 return {};
             })
             this.image.on("mouseout",function() { Engine.scrolling = null; return { };})
+            this.image.on("dragend", function() {
+                var doors = _this.getDoors();
+                Engine.Doors[_this.id] = doors;
+                console.debug("Doors: ",doors);
+                return {};
+            })
+        }
+
+        getDoors() : Sheaf {
+            var doors : Sheaf = {};
+            for(var i = 1; i <= this.roomStats.doorCount; i++)
+            {
+               var sDoor : Door = this.roomStats.doors[i];
+               doors[sDoor.id] = Utility.Rotate(sDoor, this.rotation, this.image.getX(), this.image.getY());
+            }
+            return doors;
         }
     }
 
@@ -88,7 +97,7 @@ module Elements {
         label : Kinetic.Label;
         group : Kinetic.Group;
         constructor(stats :RoomTemplate) {
-            super(stats);
+            super(stats, -1);
             this.group = new Kinetic.Group({ draggable : false });
             // Generate the image
             this.image.setWidth( Utility.ScaleToThumbWidth(this.roomStats.width, this.roomStats.height));
@@ -110,7 +119,7 @@ module Elements {
                 newInstance.image.setPosition(cursor.x, cursor.y);
                 Engine.GridLayer.add(newInstance.image);
                 newInstance.image.startDrag();
-                Engine.TileList.push(newInstance);
+                Engine.Tiles.push(newInstance);
                 return {};
             });
         }
@@ -132,9 +141,7 @@ module Elements {
 
     export class Room {
         public id:number;
-        public connections: Connections;
         constructor(public template : RoomTemplate) {
-
         }
     }
     export class TileConnection {

@@ -15,15 +15,20 @@ module Engine{
     export var Debug : boolean = true;
     var LibraryLayer : Kinetic.Layer;
     var usedWidth : number;
-    export var scrolling : Kinetic.Image;
-    export var TileList : Elements.RoomTile[];
+    export var scrolling : Elements.RoomTile;
+    export var Doors : TileList;
+    export var Tiles : Elements.RoomTile[]
 
+    export interface TileList {
+        [tile : number] : Elements.Sheaf;
+    }
     export function CreateLibrary() {
         DraftingStage = new Kinetic.Stage({container : "DraftingBoard", width : window.innerWidth, height: window.innerHeight});
         LibraryLayer = new Kinetic.Layer();
         GridLayer = new Kinetic.Layer();
         DebugLayer = new Kinetic.Layer();
-        TileList = [];
+        Tiles = [];
+        Doors = {};
         usedWidth = 10;
 
         RoomStats.Rooms.forEach(function(room){
@@ -55,8 +60,10 @@ module Engine{
         $("#DraftingBoard").mousewheel(function(event, delta, deltaX, deltaY){
             if(Engine.scrolling != null)
             {
-                Engine.scrolling.rotateDeg(90);
-                Engine.scrolling.getLayer().draw();
+                Engine.scrolling.image.rotateDeg(90);
+                Engine.scrolling.rotation = ++Engine.scrolling.rotation % 3;
+                Engine.scrolling.image.fire('dragend');
+                Engine.scrolling.image.getLayer().draw();
                 event.preventDefault();
             }
 

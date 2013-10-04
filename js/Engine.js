@@ -16,14 +16,16 @@ var Engine;
     var LibraryLayer;
     var usedWidth;
     Engine.scrolling;
-    Engine.TileList;
+    Engine.Doors;
+    Engine.Tiles;
 
     function CreateLibrary() {
         DraftingStage = new Kinetic.Stage({ container: "DraftingBoard", width: window.innerWidth, height: window.innerHeight });
         LibraryLayer = new Kinetic.Layer();
         Engine.GridLayer = new Kinetic.Layer();
         Engine.DebugLayer = new Kinetic.Layer();
-        Engine.TileList = [];
+        Engine.Tiles = [];
+        Engine.Doors = {};
         usedWidth = 10;
 
         RoomStats.Rooms.forEach(function (room) {
@@ -52,8 +54,10 @@ var Engine;
 
         $("#DraftingBoard").mousewheel(function (event, delta, deltaX, deltaY) {
             if (Engine.scrolling != null) {
-                Engine.scrolling.rotateDeg(90);
-                Engine.scrolling.getLayer().draw();
+                Engine.scrolling.image.rotateDeg(90);
+                Engine.scrolling.rotation = ++Engine.scrolling.rotation % 3;
+                Engine.scrolling.image.fire('dragend');
+                Engine.scrolling.image.getLayer().draw();
                 event.preventDefault();
             }
         });

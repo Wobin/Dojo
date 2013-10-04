@@ -11,7 +11,7 @@
     <CLASSES>
       <root url="file://$PROJECT_DIR$/js/vendor/KineticJS.js.js" />
       <root url="file://$PROJECT_DIR$/js/Interfaces/Utility.js" />
-      <root url="file://$PROJECT_DIR$/js/RoomStats.js" />
+      <root url="file://$PROJECT_DIR$/js/Data/RoomStats.js" />
       <root url="file://$PROJECT_DIR$/js/Engine.js" />
       <root url="file://$PROJECT_DIR$/js/Interfaces/Elements.js" />
     </CLASSES>

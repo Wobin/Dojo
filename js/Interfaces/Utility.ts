@@ -14,6 +14,21 @@ module Utility {
         if(height >= width) return 75;
         else return  height / width * 75;
     }
+
+    export function Rotate(door : Elements.Door, quadrant : number, cx :number, cy : number) : Elements.Door
+    {
+        var rotation = quadrant * 90 * (Math.PI / 180);
+        var cosTheta = Math.cos(rotation);
+        var sinTheta = Math.sin(rotation);
+
+        var x = door.x * cosTheta - door.y * sinTheta;
+        var y = door.x * sinTheta + door.y * cosTheta;
+
+        door.x = x + cx;
+        door.y = y + cy;
+        return door;
+    }
+
     export function Clone<T>(item : T) : T
     {
         return jQuery.extend(true, {}, item);

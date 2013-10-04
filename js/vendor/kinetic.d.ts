@@ -29,6 +29,7 @@ declare module Kinetic {
     class Node {
         constructor (config);
         clone(attrs): Node;
+        fire(eventType : string, evt? :any, bubble? : boolean ): void;
         getAbsoluteOpacity(): number;
         getAbsolutePosition(): Vector2d;
         getAbsoluteTransform(): any;

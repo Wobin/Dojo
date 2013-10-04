@@ -5,7 +5,7 @@
 * Time: 8:55 PM
 *
 */
-///<reference path="vendor/reference.d.ts"/>
+///<reference path="../vendor/reference.d.ts"/>
 var RoomStats;
 (function (RoomStats) {
     // Halls

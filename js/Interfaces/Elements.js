@@ -23,10 +23,11 @@ var Elements;
             this.height = height;
             this.doorCount = 0;
             this.doors = {};
-            for (var i = 0; i < doorList.length; i++) {
-                this.doorCount++;
-                this.doors[doorList[i].id] = doorList[i];
-            }
+            this.doorCount = doorList.length;
+            var _this = this;
+            doorList.forEach(function (door) {
+                _this.doors[door.id] = door;
+            });
             this.xCentre = height / 2;
             this.yCentre = width / 2;
         }
@@ -39,9 +40,9 @@ var Elements;
         };
 
         RoomTemplate.prototype.Clone = function () {
-            var tile = new RoomTile(this);
-            tile.roomStats = Utility.Clone(this);
+            var tile = new RoomTile(this, RoomTemplate.idSeed++);
 
+            // tile.roomStats = Utility.Clone(this);
             tile.image.setWidth(this.width);
             tile.image.setHeight(this.height);
 
@@ -52,13 +53,16 @@ var Elements;
             var tile = new RoomIndex(this);
             return tile;
         };
+        RoomTemplate.idSeed = 0;
         return RoomTemplate;
     })();
     Elements.RoomTemplate = RoomTemplate;
 
     var RoomTile = (function () {
-        function RoomTile(roomStats) {
+        function RoomTile(roomStats, id) {
             this.roomStats = roomStats;
+            this.id = id;
+            this.rotation = 0;
             var img = new Image();
             img.src = roomStats.imageURL;
             this.image = new Kinetic.Image({ image: img, width: roomStats.width, height: roomStats.height, draggable: true, offset: { x: roomStats.width / 2, y: roomStats.height / 2 } });
@@ -68,17 +72,28 @@ var Elements;
                 Utility.debugImage(this.image);
 
             this.image.on("mouseover", function () {
-                if (Engine.HasLink(_this))
-                    return {};
-
-                Engine.scrolling = _this.image;
+                Engine.scrolling = _this;
                 return {};
             });
             this.image.on("mouseout", function () {
                 Engine.scrolling = null;
                 return {};
             });
+            this.image.on("dragend", function () {
+                var doors = _this.getDoors();
+                Engine.Doors[_this.id] = doors;
+                console.debug("Doors: ", doors);
+                return {};
+            });
         }
+        RoomTile.prototype.getDoors = function () {
+            var doors = {};
+            for (var i = 1; i <= this.roomStats.doorCount; i++) {
+                var sDoor = this.roomStats.doors[i];
+                doors[sDoor.id] = Utility.Rotate(sDoor, this.rotation, this.image.getX(), this.image.getY());
+            }
+            return doors;
+        };
         return RoomTile;
     })();
     Elements.RoomTile = RoomTile;
@@ -86,7 +101,7 @@ var Elements;
     var RoomIndex = (function (_super) {
         __extends(RoomIndex, _super);
         function RoomIndex(stats) {
-            _super.call(this, stats);
+            _super.call(this, stats, -1);
             this.group = new Kinetic.Group({ draggable: false });
 
             // Generate the image
@@ -111,7 +126,7 @@ var Elements;
                 newInstance.image.setPosition(cursor.x, cursor.y);
                 Engine.GridLayer.add(newInstance.image);
                 newInstance.image.startDrag();
-                Engine.TileList.push(newInstance);
+                Engine.Tiles.push(newInstance);
                 return {};
             });
         }
