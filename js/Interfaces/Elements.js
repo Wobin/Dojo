@@ -3,9 +3,9 @@
 * User: Benjamin
 * Date: 16/09/13
 * Time: 9:15 PM
-* To change this template use File | Settings | File Templates.
+*
 */
-///<reference path="../vendor/reference.d.ts"/>
+///<reference path="../definitions/reference.d.ts"/>
 var __extends = this.__extends || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -15,19 +15,18 @@ var __extends = this.__extends || function (d, b) {
 var Elements;
 (function (Elements) {
     var RoomTemplate = (function () {
-        function RoomTemplate(id, name, imageURL, width, height, doorList) {
+        function RoomTemplate(id, name, imageURL, width, height, doors) {
             this.id = id;
             this.name = name;
             this.imageURL = imageURL;
             this.width = width;
             this.height = height;
+            this.doors = doors;
             this.doorCount = 0;
-            this.doors = {};
+            /*          this.doors = {};
             this.doorCount = doorList.length;
             var _this = this;
-            doorList.forEach(function (door) {
-                _this.doors[door.id] = door;
-            });
+            doorList.forEach(function(door : Door) {_this.doors[door.id] = door;})*/
             this.xCentre = height / 2;
             this.yCentre = width / 2;
         }
@@ -82,17 +81,16 @@ var Elements;
             this.image.on("dragend", function () {
                 var doors = _this.getDoors();
                 Engine.Doors[_this.id] = doors;
+                Engine.FindClosestDoor(_this);
                 console.debug("Doors: ", doors);
                 return {};
             });
         }
         RoomTile.prototype.getDoors = function () {
-            var doors = {};
-            for (var i = 1; i <= this.roomStats.doorCount; i++) {
-                var sDoor = this.roomStats.doors[i];
-                doors[sDoor.id] = Utility.Rotate(sDoor, this.rotation, this.image.getX(), this.image.getY());
-            }
-            return doors;
+            var _this = this;
+            return Enumerable.from(this.roomStats.doors).select(function (d) {
+                return Utility.Rotate(d, _this.rotation, _this.image.getX(), _this.image.getY());
+            }).toArray();
         };
         return RoomTile;
     })();
@@ -146,20 +144,6 @@ var Elements;
         return RoomIndex;
     })(RoomTile);
     Elements.RoomIndex = RoomIndex;
-
-    var Room = (function () {
-        function Room(template) {
-            this.template = template;
-        }
-        return Room;
-    })();
-    Elements.Room = Room;
-    var TileConnection = (function () {
-        function TileConnection() {
-        }
-        return TileConnection;
-    })();
-    Elements.TileConnection = TileConnection;
 
     var Door = (function () {
         function Door(id, x, y) {

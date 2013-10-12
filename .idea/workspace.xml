@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cca46344-433e-4ce8-b848-f4d79ec25f85" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/vendor/IndexedDBShim.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/vendor/Linq2IndexedDB.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/vendor/linq.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/vendor/linq.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/definitions/Linq2IndexedDB.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/Interfaces/Storage.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/definitions/linq.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/definitions/pouch.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/vendor/pouchdb-nightly.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/definitions/reference.d.ts" />
+      <change type="DELETED" beforePath="D:\Projects\Dojo\js\vendor\linq.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\Dojo\js\vendor\reference.d.ts" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/Benjamin.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Benjamin.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Interfaces/Elements.js.map" afterPath="$PROJECT_DIR$/js/Interfaces/Elements.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Interfaces/Elements.js" afterPath="$PROJECT_DIR$/js/Interfaces/Elements.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Interfaces/Elements.ts" afterPath="$PROJECT_DIR$/js/Interfaces/Elements.ts" />
@@ -13,14 +18,16 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Engine.js" afterPath="$PROJECT_DIR$/js/Engine.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Engine.ts" afterPath="$PROJECT_DIR$/js/Engine.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/vendor/Linq2IndexedDB.js" afterPath="$PROJECT_DIR$/js/vendor/Linq2IndexedDB.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Data/RoomStats.js.map" afterPath="$PROJECT_DIR$/js/Data/RoomStats.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Data/RoomStats.js" afterPath="$PROJECT_DIR$/js/Data/RoomStats.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Data/RoomStats.ts" afterPath="$PROJECT_DIR$/js/Data/RoomStats.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Interfaces/Utility.ts" afterPath="$PROJECT_DIR$/js/Interfaces/Utility.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/vendor/kinetic.d.ts" afterPath="$PROJECT_DIR$/js/vendor/kinetic.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/vendor/reference.d.ts" afterPath="$PROJECT_DIR$/js/vendor/reference.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\Projects\Dojo\js\RoomStats.js" afterPath="$PROJECT_DIR$/js/Data/RoomStats.js" />
-      <change type="MOVED" beforePath="D:\Projects\Dojo\js\RoomStats.js.map" afterPath="$PROJECT_DIR$/js/Data/RoomStats.js.map" />
-      <change type="MOVED" beforePath="D:\Projects\Dojo\js\RoomStats.ts" afterPath="$PROJECT_DIR$/js/Data/RoomStats.ts" />
+      <change type="MOVED" beforePath="D:\Projects\Dojo\js\vendor\jquery.d.ts" afterPath="$PROJECT_DIR$/js/definitions/jquery.d.ts" />
+      <change type="MOVED" beforePath="D:\Projects\Dojo\js\vendor\kinetic.d.ts" afterPath="$PROJECT_DIR$/js/definitions/kinetic.d.ts" />
     </list>
     <ignored path="Dojo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,70 +50,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="29" selection-start="2871" selection-end="2871" vertical-scroll-proportion="-6.3846154" vertical-offset="888" max-vertical-offset="1377">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="reference.d.ts" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/vendor/reference.d.ts">
+        <entry file="file://$PROJECT_DIR$/js/definitions/reference.d.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="32" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
+            <state line="3" column="0" selection-start="104" selection-end="146" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plugins.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/plugins.js">
+      <file leaf-file-name="Linq2IndexedDB.d.ts" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/definitions/Linq2IndexedDB.d.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+            <state line="48" column="0" selection-start="1623" selection-end="1623" vertical-scroll-proportion="0.0" vertical-offset="326" max-vertical-offset="935">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Elements.ts" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/Interfaces/Elements.ts">
+      <file leaf-file-name="linq.d.ts" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/definitions/linq.d.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="46" selection-start="3052" selection-end="3052" vertical-scroll-proportion="0.0" vertical-offset="1087" max-vertical-offset="2703">
-              <folding>
-                <element signature="n#!!block;n#Copy#0;n#RoomTemplate#0;n#Elements#0" expanded="false" />
-              </folding>
+            <state line="101" column="24" selection-start="8256" selection-end="8256" vertical-scroll-proportion="0.0" vertical-offset="1292" max-vertical-offset="4199">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KineticJS.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/vendor/KineticJS.js">
+      <file leaf-file-name="kinetic.d.ts" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/definitions/kinetic.d.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state line="461" column="0" selection-start="13363" selection-end="13363" vertical-scroll-proportion="0.0" vertical-offset="7344" max-vertical-offset="8517">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Linq2IndexedDB.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/vendor/Linq2IndexedDB.js">
+      <file leaf-file-name="Storage.ts" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/Interfaces/Storage.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3169" column="87" selection-start="176430" selection-end="176430" vertical-scroll-proportion="0.0" vertical-offset="53465" max-vertical-offset="58412">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Utility.ts" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/Interfaces/Utility.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="118" selection-start="998" selection-end="998" vertical-scroll-proportion="0.761165" vertical-offset="186" max-vertical-offset="884">
+            <state line="12" column="23" selection-start="297" selection-end="297" vertical-scroll-proportion="0.3529412" vertical-offset="0" max-vertical-offset="578">
               <folding />
             </state>
           </provider>
@@ -115,25 +98,7 @@
       <file leaf-file-name="Engine.ts" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/Engine.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="0" selection-start="1916" selection-end="1916" vertical-scroll-proportion="0.0" vertical-offset="900" max-vertical-offset="1700">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="kinetic.d.ts" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/vendor/kinetic.d.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="44" selection-start="1474" selection-end="1474" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="8517">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RoomStats.ts" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/Data/RoomStats.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="16" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1751">
+            <state line="1" column="33" selection-start="33" selection-end="37" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1751">
               <folding />
             </state>
           </provider>
@@ -158,22 +123,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="dojo/js/Interfaces/Room.js" />
-        <option value="dojo/js/Engine.ts" />
-        <option value="$PROJECT_DIR$/js/vendor/KineticJS.js.ts" />
-        <option value="dojo/js/Interfaces/Room.ts" />
-        <option value="$PROJECT_DIR$/js/vendor/jquery.d.ts" />
-        <option value="$PROJECT_DIR$/js/Interfaces/Room.js" />
-        <option value="$PROJECT_DIR$/js/Interfaces/Room.ts" />
-        <option value="$PROJECT_DIR$/js/vendor/KineticJS.js" />
         <option value="$PROJECT_DIR$/js/RoomStats.ts" />
-        <option value="$PROJECT_DIR$/js/vendor/reference.d.ts" />
-        <option value="$PROJECT_DIR$/js/vendor/Linq2IndexedDB.js" />
-        <option value="$PROJECT_DIR$/js/Interfaces/Utility.ts" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/js/Interfaces/Elements.ts" />
         <option value="$PROJECT_DIR$/js/vendor/kinetic.d.ts" />
         <option value="$PROJECT_DIR$/js/Engine.ts" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/vendor/reference.d.ts" />
+        <option value="$PROJECT_DIR$/js/vendor/definitions/reference.d.ts" />
+        <option value="$PROJECT_DIR$/js/Interfaces/Utility.ts" />
+        <option value="$PROJECT_DIR$/js/Interfaces/Elements.ts" />
+        <option value="$PROJECT_DIR$/js/Data/RoomStats.ts" />
+        <option value="$PROJECT_DIR$/js/definitions/pouch.d.ts" />
+        <option value="$PROJECT_DIR$/js/vendor/Linq2IndexedDB.js" />
+        <option value="$PROJECT_DIR$/js/definitions/reference.d.ts" />
+        <option value="$PROJECT_DIR$/js/definitions/kinetic.d.ts" />
+        <option value="$PROJECT_DIR$/js/Interfaces/Storage.js" />
+        <option value="$PROJECT_DIR$/js/definitions/Linq2IndexedDB.d.ts" />
+        <option value="$PROJECT_DIR$/js/Interfaces/Storage.ts" />
       </list>
     </option>
   </component>
@@ -228,6 +193,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -264,111 +230,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Dojo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Dojo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Dojo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Dojo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Dojo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Dojo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Interfaces" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Dojo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Dojo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Dojo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Dojo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="doc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Dojo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Dojo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="reference.idesettings.debugger.javascript" />
+    <property name="options.lastSelected" value="settings" />
     <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/GitHub/PortableGit_015aa71ef18c047ce8509ffb2f9e4bb0e3e73f13/bin/git.exe" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -382,8 +251,10 @@
       <recent name="C:\Users\Benjamin\WebstormProjects\Dojo\js\vendor" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Projects\Dojo\js\Data" />
       <recent name="D:\Projects\Dojo\js\vendor" />
+      <recent name="D:\Projects\Dojo\js" />
+      <recent name="D:\Projects\Dojo\js\vendor\definitions" />
+      <recent name="D:\Projects\Dojo\js\Data" />
       <recent name="C:\Users\Benjamin\WebstormProjects\Dojo\js\vendor" />
     </key>
   </component>
@@ -486,7 +357,11 @@
       <created>1380808837373</created>
       <updated>1380808837373</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Starting to store info on doors&#10;included a few new libraries, notably linq and indexeddb">
+      <created>1380903260402</created>
+      <updated>1380903260402</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -513,21 +388,21 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.49973643" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33741647" sideWeight="0.49973643" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.49973643" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850778" sideWeight="0.49973643" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850778" sideWeight="0.49973643" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33666667" sideWeight="0.49973643" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3288889" sideWeight="0.49973643" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32777777" sideWeight="0.49973643" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32777777" sideWeight="0.49973643" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.68191963" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2551397" sideWeight="0.6024499" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3975501" sideWeight="0.6088561" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2551397" sideWeight="0.6711111" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39666668" sideWeight="0.6088561" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3975501" sideWeight="0.39114392" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31514478" sideWeight="0.49710068" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3288889" sideWeight="0.5002636" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31333333" sideWeight="0.49710068" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.49973643" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.49973643" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.68303573" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3997773" sideWeight="0.4994664" order="5" side_tool="false" content_ui="tabs" />
@@ -548,145 +423,128 @@
     <MESSAGE value="Now rotates on mousescroll. Not sure if this is really the best way to do it." />
     <MESSAGE value="Starting to work on the snap-to&#10;Need to make sure I don't end up overlapping the tiles." />
     <MESSAGE value="Debug utility to scan coordinates&#10;Shifted door coords to a central rotation point&#10;updated KineticJS to latest version&#10;Improved utility for cloning of objects so as not to cause shared reference errors.&#10;Cleaned up some unused references&#10;Still need to work on proximity of snap-to and also door scanning for available nodes to link up" />
-    <option name="LAST_COMMIT_MESSAGE" value="Debug utility to scan coordinates&#10;Shifted door coords to a central rotation point&#10;updated KineticJS to latest version&#10;Improved utility for cloning of objects so as not to cause shared reference errors.&#10;Cleaned up some unused references&#10;Still need to work on proximity of snap-to and also door scanning for available nodes to link up" />
+    <MESSAGE value="Starting to store info on doors&#10;included a few new libraries, notably linq and indexeddb" />
+    <option name="LAST_COMMIT_MESSAGE" value="Starting to store info on doors&#10;included a few new libraries, notably linq and indexeddb" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/js/Interfaces/Elements.ts</url>
-          <line>80</line>
-          <option name="timeStamp" value="75" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/js/Engine.ts</url>
-          <line>63</line>
-          <option name="timeStamp" value="76" />
-        </line-breakpoint>
-      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="77" />
+      <option name="time" value="78" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/vendor/jquery.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="357" column="6" selection-start="12109" selection-end="12109" vertical-scroll-proportion="0.37526205" vertical-offset="5890" max-vertical-offset="14042">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/doc/crossdomain.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="577">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/doc/css.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="58" selection-start="2030" selection-end="2030" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="2414">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/plugins.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="528">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/Interfaces/Utility.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="604" selection-end="604" vertical-scroll-proportion="0.0" vertical-offset="29" max-vertical-offset="544">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/Interfaces/Elements.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="49" selection-start="1735" selection-end="1735" vertical-scroll-proportion="0.7262136" vertical-offset="510" max-vertical-offset="2737">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/vendor/linq.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3825">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/vendor/reference.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="32" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/vendor/Linq2IndexedDB.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3169" column="87" selection-start="176430" selection-end="176430" vertical-scroll-proportion="0.0" vertical-offset="53465" max-vertical-offset="58412">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="29" selection-start="2871" selection-end="2871" vertical-scroll-proportion="-6.3846154" vertical-offset="888" max-vertical-offset="1377">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/vendor/KineticJS.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/vendor/kinetic.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="44" selection-start="1474" selection-end="1474" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="8517">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/Engine.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="0" selection-start="1916" selection-end="1916" vertical-scroll-proportion="0.0" vertical-offset="900" max-vertical-offset="1700">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/Interfaces/Elements.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="46" selection-start="3052" selection-end="3052" vertical-scroll-proportion="0.0" vertical-offset="1087" max-vertical-offset="2703">
-          <folding>
-            <element signature="n#!!block;n#Copy#0;n#RoomTemplate#0;n#Elements#0" expanded="false" />
-          </folding>
+        <state line="1" column="33" selection-start="33" selection-end="37" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="2431">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/vendor/jquery-1.10.2.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="9204" selection-start="73412" selection-end="73412" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/vendor/pouchdb-nightly.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="565">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/definitions/pouch.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3842">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/Data/RoomStats.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="16" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1751">
+        <state line="68" column="0" selection-start="5531" selection-end="5531" vertical-scroll-proportion="0.0" vertical-offset="1139" max-vertical-offset="1751">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Interfaces/Storage.js.map">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="579">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/Interfaces/Utility.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="118" selection-start="998" selection-end="998" vertical-scroll-proportion="0.761165" vertical-offset="186" max-vertical-offset="884">
+        <state line="13" column="35" selection-start="403" selection-end="403" vertical-scroll-proportion="0.3158784" vertical-offset="34" max-vertical-offset="884">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/vendor/Linq2IndexedDB.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1509" column="36" selection-start="73048" selection-end="73054" vertical-scroll-proportion="0.33212996" vertical-offset="25469" max-vertical-offset="58412">
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/definitions/linq.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="24" selection-start="8256" selection-end="8256" vertical-scroll-proportion="0.0" vertical-offset="1292" max-vertical-offset="4199">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/definitions/kinetic.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="461" column="0" selection-start="13363" selection-end="13363" vertical-scroll-proportion="0.0" vertical-offset="7344" max-vertical-offset="8517">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Interfaces/Storage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="339" selection-end="339" vertical-scroll-proportion="0.3733108" vertical-offset="0" max-vertical-offset="592">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Engine.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="33" selection-start="33" selection-end="37" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1751">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/definitions/reference.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="104" selection-end="146" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/definitions/Linq2IndexedDB.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="0" selection-start="1623" selection-end="1623" vertical-scroll-proportion="0.0" vertical-offset="326" max-vertical-offset="935">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/render.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="230" column="85" selection-start="7679" selection-end="7679" vertical-scroll-proportion="0.7647059" vertical-offset="3468" max-vertical-offset="7310">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Interfaces/Storage.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="23" selection-start="297" selection-end="297" vertical-scroll-proportion="0.3529412" vertical-offset="0" max-vertical-offset="578">
           <folding />
         </state>
       </provider>

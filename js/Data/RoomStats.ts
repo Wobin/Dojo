@@ -5,7 +5,7 @@
  * Time: 8:55 PM
  *
  */
-///<reference path="../vendor/reference.d.ts"/>
+///<reference path="../definitions/reference.d.ts"/>
 module RoomStats {
 
 // Halls

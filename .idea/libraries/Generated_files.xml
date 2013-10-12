@@ -3,17 +3,22 @@
     <properties>
       <sourceFilesUrls>
         <item url="file://$PROJECT_DIR$/js/Interfaces/Utility.js" />
-        <item url="file://$PROJECT_DIR$/js/RoomStats.js" />
+        <item url="file://$PROJECT_DIR$/js/Data/RoomStats.js" />
         <item url="file://$PROJECT_DIR$/js/Interfaces/Elements.js" />
         <item url="file://$PROJECT_DIR$/js/Engine.js" />
+        <item url="file://$PROJECT_DIR$/js/vendor/Linq2IndexedDB.js" />
+        <item url="file://$PROJECT_DIR$/js/Interfaces/Storage.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
       <root url="file://$PROJECT_DIR$/js/vendor/KineticJS.js.js" />
+      <root url="file://$PROJECT_DIR$/js/vendor/Linq2IndexedDB.js" />
       <root url="file://$PROJECT_DIR$/js/Interfaces/Utility.js" />
       <root url="file://$PROJECT_DIR$/js/Data/RoomStats.js" />
       <root url="file://$PROJECT_DIR$/js/Engine.js" />
       <root url="file://$PROJECT_DIR$/js/Interfaces/Elements.js" />
+      <root url="file://$PROJECT_DIR$/js/vendor/Linq2IndexedDB.js" />
+      <root url="file://$PROJECT_DIR$/js/Interfaces/Storage.js" />
     </CLASSES>
     <SOURCES />
   </library>

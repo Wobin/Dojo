@@ -3,32 +3,28 @@
  * User: Benjamin
  * Date: 16/09/13
  * Time: 9:15 PM
- * To change this template use File | Settings | File Templates.
+ *
  */
-///<reference path="../vendor/reference.d.ts"/>
+///<reference path="../definitions/reference.d.ts"/>
 
 module Elements {
-    export interface IDoor {
-        id : number;
-        x : number;
-        y : number;
-    }
+
     export interface Sheaf {
         [id : number] : Door;
     }
 
     export class RoomTemplate {
         public static idSeed = 0;
-        public doors:Sheaf;
+//        public doors:Sheaf;
         public xCentre : number;
         public yCentre : number;
         public doorCount : number = 0;
 
-        constructor(public id:number, public name: string, public imageURL:string, public width:number, public height:number, doorList: Door[]) {
-            this.doors = {};
+        constructor(public id:number, public name: string, public imageURL:string, public width:number, public height:number, public doors: Door[]) {
+  /*          this.doors = {};
             this.doorCount = doorList.length;
             var _this = this;
-            doorList.forEach(function(door : Door) {_this.doors[door.id] = door;})
+            doorList.forEach(function(door : Door) {_this.doors[door.id] = door;})*/
             this.xCentre = height/2;
             this.yCentre = width/2;
         }
@@ -77,19 +73,14 @@ module Elements {
             this.image.on("dragend", function() {
                 var doors = _this.getDoors();
                 Engine.Doors[_this.id] = doors;
+                Engine.FindClosestDoor(_this);
                 console.debug("Doors: ",doors);
                 return {};
             })
         }
 
-        getDoors() : Sheaf {
-            var doors : Sheaf = {};
-            for(var i = 1; i <= this.roomStats.doorCount; i++)
-            {
-               var sDoor : Door = this.roomStats.doors[i];
-               doors[sDoor.id] = Utility.Rotate(sDoor, this.rotation, this.image.getX(), this.image.getY());
-            }
-            return doors;
+        getDoors() : Door[] {
+            return Enumerable.from(this.roomStats.doors).select(d => Utility.Rotate(d, this.rotation, this.image.getX(), this.image.getY())).toArray();
         }
     }
 
@@ -138,20 +129,7 @@ module Elements {
         }
     }
 
-
-    export class Room {
-        public id:number;
-        constructor(public template : RoomTemplate) {
-        }
-    }
-    export class TileConnection {
-        public Tile1 : RoomTile;
-        public Door1 : Door;
-        public Tile2 : RoomTile;
-        public Door2 : Door;
-    }
-
-    export class Door implements IDoor {
+    export class Door {
         constructor(public id:number, public x:number, public y:number) {
         }
     }

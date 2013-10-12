@@ -1,7 +1,7 @@
 /**
  * Created by Benjamin on 3/10/13.
  */
-///<reference path="../vendor/reference.d.ts"/>
+///<reference path="../definitions/reference.d.ts"/>
 
 module Utility {
     export function ScaleToThumbWidth(width :number, height: number) :number
